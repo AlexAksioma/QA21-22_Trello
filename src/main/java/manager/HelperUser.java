@@ -8,7 +8,7 @@ public class HelperUser extends HelperBase{
         super(driver);
     }
 
-By buttonLogin = By.xpath("//");
+By buttonLogin = By.xpath("//*[]");
 
     public void clickButtonLogin(){
         clickBase(buttonLogin);
