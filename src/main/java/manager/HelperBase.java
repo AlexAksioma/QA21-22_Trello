@@ -13,12 +13,12 @@ public class HelperBase {
     }
 
     private WebElement findElementBase(By locator){
-        System.out.println(locator);
+        //System.out.println(locator);
         return driver.findElement(locator);
     }
 
     private List<WebElement> findElementsBase(By locator){
-        System.out.println(locator);
+        //System.out.println(locator);
         return driver.findElements(locator);
     }
 

@@ -16,6 +16,10 @@ public class HelperUser extends HelperBase{
 
     By buttonHeaderMemberMenu = By.xpath("//button[@data-testid='header-member-menu-button']");
 
+    By buttonLogout = By.xpath("//button[@data-testid='account-menu-logout']");
+
+    By buttonLogoutSubmit = By.id("logout-submit");
+
     public void clickButtonLogin(){
         clickBase(buttonLogin);
     }
@@ -26,6 +30,12 @@ public class HelperUser extends HelperBase{
         clickBase(buttonContinue);
         typeBase(inputPassword, password);
         clickBase(buttonLoginSubmit);
+    }
+
+    public void logout(){
+        clickBase(buttonHeaderMemberMenu);
+        clickBase(buttonLogout);
+        clickBase(buttonLogoutSubmit);
     }
 
     public boolean isLogged(){
