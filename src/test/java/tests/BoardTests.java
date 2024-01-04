@@ -21,7 +21,8 @@ public class BoardTests extends TestBase {
         int i = new Random().nextInt(1000) + 1000;
         String boardTitle = "board" + i;
         app.getHelperBoard().createNewBoard(boardTitle);
-        Assert.assertTrue(app.getHelperBoard().isBoardTitlePresent(boardTitle));
+        //Assert.assertTrue(app.getHelperBoard().isBoardTitlePresent(boardTitle));
+        Assert.assertTrue(app.getHelperBoard().isTextInElementPresentByWait_boardTitle(boardTitle, 5));
     }
 
     @Test
@@ -51,8 +52,8 @@ public class BoardTests extends TestBase {
 //        app.getHelperBoard().clickButtonBoards();
 //    }
 
-    @AfterClass
-    public void logout(){
-        app.getHelperUser().logout();
-    }
+//    @AfterClass
+//    public void logout(){
+//        app.getHelperUser().logout();
+//    }
 }

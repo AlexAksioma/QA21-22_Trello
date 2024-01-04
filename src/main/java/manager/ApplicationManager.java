@@ -13,6 +13,8 @@ public class ApplicationManager {
 
     HelperBoard helperBoard;
 
+    HelperProfile helperProfile;
+
     public void init(){
         driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -20,6 +22,8 @@ public class ApplicationManager {
         driver.navigate().to("https://trello.com/home");
         helperUser = new HelperUser(driver);
         helperBoard = new HelperBoard(driver);
+        helperProfile = new HelperProfile(driver);
+
     }
 
     public HelperUser getHelperUser(){
@@ -27,6 +31,10 @@ public class ApplicationManager {
     }
     public HelperBoard getHelperBoard(){
         return helperBoard;
+    }
+
+    public HelperProfile getHelperProfile(){
+        return  helperProfile;
     }
     public void stop(){
         //driver.close();

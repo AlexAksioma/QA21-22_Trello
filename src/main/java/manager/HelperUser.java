@@ -14,7 +14,7 @@ public class HelperUser extends HelperBase{
     By buttonContinue = By.cssSelector("#login-submit");
     By buttonLoginSubmit = By.cssSelector("#login-submit");
 
-    By buttonHeaderMemberMenu = By.xpath("//button[@data-testid='header-member-menu-button']");
+    //By buttonHeaderMemberMenu = By.xpath("//button[@data-testid='header-member-menu-button']");
 
     By buttonLogout = By.xpath("//button[@data-testid='account-menu-logout']");
 

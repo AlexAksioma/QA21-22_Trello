@@ -2,6 +2,8 @@ package manager;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class HelperBoard extends HelperBase{
     public HelperBoard(WebDriver driver) {
@@ -30,8 +32,9 @@ public class HelperBoard extends HelperBase{
     public void createNewBoard(String boardTitle) {
         clickBase(buttonCreateNewBoard);
         typeBase(inputBoardTitle, boardTitle);
-        pause(2);
-        clickBase(buttonCreateBoard);
+        //pause(2);
+        //clickBase(buttonCreateBoard);
+        clickBaseWait(buttonCreateBoard,3);
 
     }
     public boolean isBoardTitlePresent(String text){
@@ -45,7 +48,8 @@ public class HelperBoard extends HelperBase{
     public void deleteBoard(String boardTitle) {
         pause(3);
         clickBoardsOnTitle(boardTitle);
-        clickBase(dots);
+        //clickBase(dots);
+        clickBaseWait(dots, 5);
         clickBase(buttonCloseBoard);
         clickBase(buttonCloseConfirm);
         clickBase(buttonDeleteBoard);
@@ -58,5 +62,10 @@ public class HelperBoard extends HelperBase{
         String xPathBoardTitle = "//div[@title='"+boardTitle+"']";
         System.out.println(xPathBoardTitle);
         //clickBase(By.xpath(xPathBoardTitle));
+    }
+
+
+    public boolean isTextInElementPresentByWait_boardTitle(String boardTitle, int time) {
+        return isTextInElementPresentByWait(textBoardTitle, boardTitle, time);
     }
 }
