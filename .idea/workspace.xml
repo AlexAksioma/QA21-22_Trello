@@ -4,17 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="85348986-9c44-4791-86ee-1889f5b3d958" name="Changes" comment="added delete board, lombok">
-      <change afterPath="$PROJECT_DIR$/src/main/java/manager/HelperProfile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/ProfileTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/qa_blue.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/qa_yellow.png" afterDir="false" />
+    <list default="true" id="85348986-9c44-4791-86ee-1889f5b3d958" name="Changes" comment="added ProfileTests">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/manager/ApplicationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/manager/ApplicationManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/manager/HelperBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/manager/HelperBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/manager/HelperBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/manager/HelperBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/manager/HelperUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/manager/HelperUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/BoardTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/BoardTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/manager/HelperProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/manager/HelperProfile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/LoginTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/LoginTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +65,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/QA_Auto_Projects/QA_21_22/QA21-22_Trello"
+    "last_opened_file_path": "C:/QA_Auto_Projects/MyProject/MyTrello"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -79,7 +74,7 @@
       <recent name="C:\QA_Auto_Projects\QA_21_22\QA21-22_Trello\src\test\java" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.ProfileTests.changeAvatarPositiveTest">
+  <component name="RunManager" selected="Gradle.LoginTests.loginPositiveTest">
     <configuration name="BoardTests.createNewBoardPositiveTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -152,7 +147,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="CreateNewBoardTests.createNewBoardPositiveTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="LoginTests.loginPositiveTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -165,7 +160,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;tests.CreateNewBoardTests.createNewBoardPositiveTest&quot;" />
+            <option value="&quot;tests.LoginTests.loginPositiveTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -202,11 +197,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.LoginTests.loginPositiveTest" />
         <item itemvalue="Gradle.ProfileTests.changeAvatarPositiveTest" />
         <item itemvalue="Gradle.BoardTests.deleteBoardPositiveTest" />
         <item itemvalue="Gradle.BoardTests.createNewBoardPositiveTest" />
         <item itemvalue="Gradle.BoardTests.createNewBoardPositiveTest_Lombok" />
-        <item itemvalue="Gradle.CreateNewBoardTests.createNewBoardPositiveTest" />
       </list>
     </recent_temporary>
   </component>
@@ -259,7 +254,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703787089109</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="added ProfileTests">
+      <option name="closed" value="true" />
+      <created>1704392576455</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1704392576455</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -267,6 +270,7 @@
     <MESSAGE value="added appmanager and tests" />
     <MESSAGE value="added login, create new board" />
     <MESSAGE value="added delete board, lombok" />
-    <option name="LAST_COMMIT_MESSAGE" value="added delete board, lombok" />
+    <MESSAGE value="added ProfileTests" />
+    <option name="LAST_COMMIT_MESSAGE" value="added ProfileTests" />
   </component>
 </project>

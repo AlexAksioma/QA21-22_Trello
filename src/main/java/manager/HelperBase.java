@@ -1,11 +1,16 @@
 package manager;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+
+import com.google.common.io.Files;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.io.File;
+
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 public class HelperBase {
@@ -43,7 +48,7 @@ public class HelperBase {
         try {
             wait.until(ExpectedConditions.elementToBeClickable(locator)).click();
         }catch (Exception e){
-
+            e.printStackTrace();
         }
     }
     public void typeBase(By locator, String text){
@@ -62,9 +67,35 @@ public class HelperBase {
         return element.getText().equals(text);
     }
     public  boolean isTextInElementPresentByWait(By locator, String text, int time){
-        return new WebDriverWait(driver, time)
-                .until(ExpectedConditions.textToBePresentInElementLocated(locator, text));
+        try {
+            new WebDriverWait(driver, time)
+                    .until(ExpectedConditions.textToBePresentInElementLocated(locator, text));
+            return true;
+        }catch (Exception e){
+            return false;
+        }
+
     }
 
+    public void takeScreenshot(){
+        TakesScreenshot screenshot = ((TakesScreenshot) driver);
+        File srcFile = screenshot.getScreenshotAs(OutputType.FILE);
+
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd_HH:mm:ss");
+        Date date = new Date(System.currentTimeMillis());
+        //System.out.println(date);
+        String curDate = formatter.format(date);
+        //System.out.println(curDate);
+        String fileName = curDate.replace(":","-");
+        //System.out.println(fileName);
+        String filePath = "src/test_logs/screenshots/screnshot_" + fileName + ".png";
+
+        File destFile = new File(filePath);
+        try {
+            Files.copy(srcFile, destFile);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
 }
