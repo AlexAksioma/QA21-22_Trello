@@ -2,8 +2,9 @@ package manager;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.WebElement;
+
+import java.util.List;
 
 public class HelperBoard extends HelperBase{
     public HelperBoard(WebDriver driver) {
@@ -17,7 +18,7 @@ public class HelperBoard extends HelperBase{
 
     By textBoardTitle = By.xpath("//h1[@data-testid='board-name-display']");
 
-    By buttonBoards = By.xpath("//a[@data-testid='open-boards-link']");
+    By buttonBoards = By.xpath("//a[@data-testid='open-boards-link']"); //data-testid="open-boards-link"
 
     By dots = By.xpath("//button[@aria-label='Show menu']");
 
@@ -28,13 +29,18 @@ public class HelperBoard extends HelperBase{
     By buttonDeleteBoard = By.xpath("//button[@data-testid='close-board-delete-board-button']");
     By buttonDeleteBoardConfirm = By.xpath("//button[@data-testid='close-board-delete-board-confirm-button']");
 
+    //========================================]
+
+    By listBoard = By.xpath("//h3[text()='YOUR WORKSPACES']/..//ul/li");
+    List<WebElement> listBoardElLi = driver.findElements(listBoard);
+
 
     public void createNewBoard(String boardTitle) {
         clickBase(buttonCreateNewBoard);
         typeBase(inputBoardTitle, boardTitle);
         //pause(2);
         //clickBase(buttonCreateBoard);
-        clickBaseWait(buttonCreateBoard,3);
+        clickBaseWait(buttonCreateBoard,5);
 
     }
     public boolean isBoardTitlePresent(String text){
@@ -67,5 +73,10 @@ public class HelperBoard extends HelperBase{
 
     public boolean isTextInElementPresentByWait_boardTitle(String boardTitle, int time) {
         return isTextInElementPresentByWait(textBoardTitle, boardTitle, time);
+    }
+
+
+    public boolean isElementPresent_buttonBoards() {
+        return  isElementPresent(buttonBoards);
     }
 }
