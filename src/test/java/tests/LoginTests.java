@@ -18,7 +18,7 @@ public class LoginTests extends TestBase{
         //app.getHelperUser().login("aksiomamedved@gmail.com","AlexMed123!");
         app.getHelperUser().login(user.getEmail(), user.getPassword());
         logger.info("method --> " +method.getName()+" email -->"+user.getEmail()+" password --> "+user.getPassword());
-        app.getHelperUser().takeScreenshot();
+        //app.getHelperUser().takeScreenshot();
         logger.info("method duration --> "+(startTime-System.currentTimeMillis()));
         Assert.assertTrue(app.getHelperUser().isLogged());
     }

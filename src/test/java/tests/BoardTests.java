@@ -30,7 +30,7 @@ public class BoardTests extends TestBase {
     public void createNewBoardPositiveTest_Lombok(Method method) {
         int i = new Random().nextInt(1000) + 1000;
         BoardDTO board = BoardDTO.builder()
-                .boardTitle("boardDto" + i)
+                //.boardTitle("boardDto" + i)
                 .build();
         app.getHelperBoard().createNewBoard(board.getBoardTitle());
         logger.info("start method --> " + method.getName() + " board title -->" + board.getBoardTitle());

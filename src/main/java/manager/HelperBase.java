@@ -27,7 +27,7 @@ public class HelperBase {
 
     private WebElement findElementBase(By locator){
         //System.out.println(locator);
-        logger.info("find element --> "+locator);
+        //logger.info("find element --> "+locator);
         return driver.findElement(locator);
     }
 
@@ -41,6 +41,8 @@ public class HelperBase {
             Thread.sleep(time* 1000L);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
+        }finally {
+            logger.info("used method pause with time -->"+time+" sec");
         }
     }
 
@@ -83,25 +85,25 @@ public class HelperBase {
 
     }
 
-    public void takeScreenshot(){
-        TakesScreenshot screenshot = ((TakesScreenshot) driver);
-        File srcFile = screenshot.getScreenshotAs(OutputType.FILE);
-
-        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd_HH:mm:ss");
-        Date date = new Date(System.currentTimeMillis());
-        //System.out.println(date);
-        String curDate = formatter.format(date);
-        //System.out.println(curDate);
-        String fileName = curDate.replace(":","-");
-        //System.out.println(fileName);
-        String filePath = "src/test_logs/screenshots/screnshot_" + fileName + ".png";
-
-        File destFile = new File(filePath);
-        try {
-            Files.copy(srcFile, destFile);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-    }
+//    public void takeScreenshot(){
+//        TakesScreenshot screenshot = ((TakesScreenshot) driver);
+//        File srcFile = screenshot.getScreenshotAs(OutputType.FILE);
+//
+//        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd_HH:mm:ss");
+//        Date date = new Date(System.currentTimeMillis());
+//        //System.out.println(date);
+//        String curDate = formatter.format(date);
+//        //System.out.println(curDate);
+//        String fileName = curDate.replace(":","-");
+//        //System.out.println(fileName);
+//        String filePath = "src/test_logs/screenshots/screnshot_" + fileName + ".png";
+//
+//        File destFile = new File(filePath);
+//        try {
+//            Files.copy(srcFile, destFile);
+//        } catch (IOException e) {
+//            throw new RuntimeException(e);
+//        }
+//    }
 
 }

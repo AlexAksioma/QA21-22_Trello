@@ -2,6 +2,7 @@ package manager;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -10,8 +11,9 @@ import java.util.concurrent.TimeUnit;
 
 public class ApplicationManager {
 
-    WebDriver driver;
+    //WebDriver driver;
 
+    EventFiringWebDriver driver;
     HelperUser helperUser;
 
     HelperBoard helperBoard;
@@ -23,15 +25,17 @@ public class ApplicationManager {
     String url = "https://trello.com/home";
 
     public void init(){
-        driver = new ChromeDriver();
+        driver = new EventFiringWebDriver(new ChromeDriver());
+        driver.register(new WDListener());
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.navigate().to(url);
+
         helperUser = new HelperUser(driver);
         helperBoard = new HelperBoard(driver);
         helperProfile = new HelperProfile(driver);
 
-        logger.info("URL --> " +url+"start testing --> "+ LocalDate.now());
+        logger.info("start testing -------------------------------> "+ LocalDate.now());
     }
 
     public HelperUser getHelperUser(){
