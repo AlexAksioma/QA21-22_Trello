@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 
 import java.util.List;
 
-public class HelperBoard extends HelperBase{
+public class HelperBoard extends HelperBase {
     public HelperBoard(WebDriver driver) {
         super(driver);
     }
@@ -32,22 +32,42 @@ public class HelperBoard extends HelperBase{
     //========================================]
 
     By listBoard = By.xpath("//h3[text()='YOUR WORKSPACES']/..//ul/li");
-    List<WebElement> listBoardElLi = driver.findElements(listBoard);
 
+    By secondElementInListBoard = By.xpath("//h3[text()='YOUR WORKSPACES']/..//ul/li[2]");
+
+
+    public void deleteElementList() {
+        List<WebElement> listElLi = driver.findElements(listBoard);
+        for (int i = 1; i<listElLi.size(); i++) {
+            WebElement element = driver.findElement(secondElementInListBoard);
+            try {
+                element.getAttribute("data-testid").equals("create-board-tile");  // return null add if and finali
+            }catch (Exception e) {
+                element.click();
+                clickBaseWait(dots, 5);
+                clickBase(buttonCloseBoard);
+                clickBase(buttonCloseConfirm);
+                clickBase(buttonDeleteBoard);
+                clickBase(buttonDeleteBoardConfirm);
+                pause(5);
+            }
+        }
+    }
 
     public void createNewBoard(String boardTitle) {
         clickBase(buttonCreateNewBoard);
         typeBase(inputBoardTitle, boardTitle);
         //pause(2);
         //clickBase(buttonCreateBoard);
-        clickBaseWait(buttonCreateBoard,5);
+        clickBaseWait(buttonCreateBoard, 5);
 
     }
-    public boolean isBoardTitlePresent(String text){
+
+    public boolean isBoardTitlePresent(String text) {
         return isTextInElementEquals(textBoardTitle, text);
     }
 
-    public void clickButtonBoards(){
+    public void clickButtonBoards() {
         clickBase(buttonBoards);
     }
 
@@ -65,7 +85,7 @@ public class HelperBoard extends HelperBase{
     private void clickBoardsOnTitle(String boardTitle) {
         driver.navigate().refresh();
         //String xPathBoardTitle = "//a[@href='/b/hsnwZRdF/"+boardTitle.toLowerCase()+"']";
-        String xPathBoardTitle = "//div[@title='"+boardTitle+"']";
+        String xPathBoardTitle = "//div[@title='" + boardTitle + "']";
         System.out.println(xPathBoardTitle);
         //clickBase(By.xpath(xPathBoardTitle));
     }
@@ -77,6 +97,6 @@ public class HelperBoard extends HelperBase{
 
 
     public boolean isElementPresent_buttonBoards() {
-        return  isElementPresent(buttonBoards);
+        return isElementPresent(buttonBoards);
     }
 }
