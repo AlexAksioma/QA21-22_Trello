@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="85348986-9c44-4791-86ee-1889f5b3d958" name="Changes" comment="added WDListener.java">
+    <list default="true" id="85348986-9c44-4791-86ee-1889f5b3d958" name="Changes" comment="added method delete all boards">
+      <change afterPath="$PROJECT_DIR$/src/main/java/manager/TestNGListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/manager/HelperBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/manager/HelperBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/manager/HelperProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/manager/HelperProfile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/BoardTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/BoardTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -64,7 +63,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/QA_Auto_Projects/JuliaProject&quot;
+    &quot;last_opened_file_path&quot;: &quot;C:/QA_Auto_Projects/QA_21_22/QA21-22_Trello&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -76,7 +75,7 @@
       <recent name="C:\QA_Auto_Projects\QA_21_22\QA21-22_Trello\src\test\java" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.BoardTests.deleteAllBoardsTest">
+  <component name="RunManager" selected="Gradle.BoardTests.createNewBoardPositiveTest_Lombok">
     <configuration name="BoardTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -199,8 +198,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.BoardTests.deleteAllBoardsTest" />
         <item itemvalue="Gradle.BoardTests.createNewBoardPositiveTest_Lombok" />
+        <item itemvalue="Gradle.BoardTests.deleteAllBoardsTest" />
         <item itemvalue="Gradle.LoginTests.loginPositiveTest" />
         <item itemvalue="Gradle.BoardTests" />
         <item itemvalue="Gradle.BoardTests.createNewBoardPositiveTest" />
@@ -288,7 +287,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705337791947</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="added method delete all boards">
+      <option name="closed" value="true" />
+      <created>1705567806183</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1705567806183</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -299,6 +306,7 @@
     <MESSAGE value="added ProfileTests" />
     <MESSAGE value="added logger" />
     <MESSAGE value="added WDListener.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="added WDListener.java" />
+    <MESSAGE value="added method delete all boards" />
+    <option name="LAST_COMMIT_MESSAGE" value="added method delete all boards" />
   </component>
 </project>

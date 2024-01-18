@@ -59,7 +59,7 @@ public class HelperBoard extends HelperBase {
         typeBase(inputBoardTitle, boardTitle);
         //pause(2);
         //clickBase(buttonCreateBoard);
-        clickBaseWait(buttonCreateBoard, 5);
+        clickBaseWait(buttonCreateBoard, 10);
 
     }
 

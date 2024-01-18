@@ -1,5 +1,6 @@
 package manager;
 
+import models.UserDTO;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -29,6 +30,14 @@ public class HelperUser extends HelperBase{
         typeBase(inputLogin, email);
         clickBase(buttonContinue);
         typeBase(inputPassword, password);
+        clickBase(buttonLoginSubmit);
+    }
+
+    public void loginDTO(UserDTO userDTO) {
+        clickBase(buttonLogin);
+        typeBase(inputLogin, userDTO.getEmail());
+        clickBase(buttonContinue);
+        typeBase(inputPassword, userDTO.getPassword());
         clickBase(buttonLoginSubmit);
     }
 

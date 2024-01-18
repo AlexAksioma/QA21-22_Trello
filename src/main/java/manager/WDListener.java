@@ -23,7 +23,7 @@ public class WDListener extends AbstractWebDriverEventListener {
     @Override
     public void beforeNavigateTo(String url, WebDriver driver) {
         super.beforeNavigateTo(url, driver);
-        logger.info("navigate to -->" + url);
+        logger.info("navigate to --> " + url);
     }
 
     @Override
@@ -124,7 +124,7 @@ public class WDListener extends AbstractWebDriverEventListener {
         logger.info("start on exception in WDListener class");
         logger.error(throwable.getMessage());
         logger.error(throwable.toString());
-        logger.info("create screenshot with nam --> " + fileName);
+        logger.info("create screenshot with name --> " + fileName);
         takeScreenshot((TakesScreenshot) driver, fileName);
     }
 
