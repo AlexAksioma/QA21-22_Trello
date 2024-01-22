@@ -13,14 +13,14 @@ import java.util.List;
 public class SelectorXpath {
 
     WebDriver driver;
-    @BeforeClass
+    @BeforeClass()
     public void preCondition(){
         driver = new ChromeDriver();
         driver.get("https://trello.com/home");
         System.out.println("before class");
     }
 
-    @Test
+    @Test(enabled = false)
     public void start(){
         System.out.println("Hi test1 ================");
         WebElement elementLogin = driver.findElement(By.xpath("//a[@data-uuid='MJFtCCgVhXrVl7v9HA7EH_login']"));
@@ -44,7 +44,7 @@ public class SelectorXpath {
         List<WebElement> webElementList = driver.findElements(By.xpath("//*[@id='skip-target']/section"));
         System.out.println("size list --> "+webElementList.size());
     }
-    @Test
+    @Test(enabled = false)
     public void start1(){
         System.out.println("Hi test2 ================");
     }

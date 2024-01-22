@@ -24,3 +24,16 @@ dependencies {
 test {
     useTestNG()
 }
+
+task boardtests(type:Test){
+    useTestNG(){
+        suites 'src/test/resources/board.xml'
+    }
+}
+
+task profiletests(type:Test){
+    useTestNG(){
+        suites 'src/test/resources/profile.xml'
+    }
+}
+

@@ -5,10 +5,7 @@ import manager.TestNgListener;
 import models.BoardDTO;
 import models.UserDTO;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Listeners;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 import java.lang.reflect.Method;
 import java.util.Random;
@@ -28,28 +25,28 @@ public class BoardTests extends TestBase {
         app.getHelperUser().loginDTO(user);
     }
 
-//    @Test
-//    public void createNewBoardPositiveTest(Method method) {
-//        int i = new Random().nextInt(1000) + 1000;
-//        String boardTitle = "board" + i;
-//        app.getHelperBoard().createNewBoard(boardTitle);
-//        logger.info("method --> " + method.getName() + " with data board title --> " + boardTitle);
-//        //Assert.assertTrue(app.getHelperBoard().isBoardTitlePresent(boardTitle));
-//        Assert.assertTrue(app.getHelperBoard().isTextInElementPresentByWait_boardTitle(boardTitle, 5));
-//    }
+    @Test(enabled = false)
+    public void createNewBoardPositiveTest(Method method) {
+        int i = new Random().nextInt(1000) + 1000;
+        String boardTitle = "board" + i;
+        app.getHelperBoard().createNewBoard(boardTitle);
+        logger.info("method --> " + method.getName() + " with data board title --> " + boardTitle);
+        //Assert.assertTrue(app.getHelperBoard().isBoardTitlePresent(boardTitle));
+        Assert.assertTrue(app.getHelperBoard().isTextInElementPresentByWait_boardTitle(boardTitle, 5));
+    }
 
-//    @Test
-//    public void createNewBoardPositiveTest_Lombok(Method method) {
-//        int i = new Random().nextInt(1000) + 1000;
-//        BoardDTO board = BoardDTO.builder()
-//                .boardTitle("boardDto" + i)
-//                .build();
-//        app.getHelperBoard().createNewBoard(board.getBoardTitle());
-//        logger.info("method --> " + method.getName() + " with data board title --> " + board.getBoardTitle());
-//        Assert.assertTrue(app.getHelperBoard().isBoardTitlePresent(board.getBoardTitle()));
-//    }
+    @Test(enabled = false)
+    public void createNewBoardPositiveTest_Lombok(Method method) {
+        int i = new Random().nextInt(1000) + 1000;
+        BoardDTO board = BoardDTO.builder()
+                .boardTitle("boardDto" + i)
+                .build();
+        app.getHelperBoard().createNewBoard(board.getBoardTitle());
+        logger.info("method --> " + method.getName() + " with data board title --> " + board.getBoardTitle());
+        Assert.assertTrue(app.getHelperBoard().isBoardTitlePresent(board.getBoardTitle()));
+    }
     //==================================== dataProvider
-    @Test(dataProvider = "dataProvider_createNewBoardPositiveTest_DP", dataProviderClass = DataProviderBoard.class)
+    @Test(groups = {"smoke"}, dataProvider = "dataProvider_createNewBoardPositiveTest_DPFile", dataProviderClass = DataProviderBoard.class)
     public void createNewBoardPositiveTest_DP(BoardDTO board, Method method) {
         app.getHelperBoard().createNewBoard(board.getBoardTitle());
         logger.info("method --> " + method.getName() + " with data board title --> " + board.getBoardTitle());
@@ -78,7 +75,7 @@ public class BoardTests extends TestBase {
         app.getHelperBoard().deleteBoard(board.getBoardTitle());
     }
 
-    @Test
+    @Test(invocationCount = 1)
     public void deleteAllBoardsTest() {
         //logger.info("start method deleteAllBoards =======================================");
         app.getHelperBoard().deleteElementList();
@@ -93,8 +90,10 @@ public class BoardTests extends TestBase {
         logger.info("stop after method -------------------------------");
     }
 
-//    @AfterClass
-//    public void logout(){
-//        app.getHelperUser().logout();
-//    }
+    @AfterClass
+    public void logout(){
+        logger.info("start after class ------------------------------");
+        app.getHelperUser().logout();
+        logger.info("stop after class -------------------------------");
+    }
 }

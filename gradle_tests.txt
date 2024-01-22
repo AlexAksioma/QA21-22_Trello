@@ -1,0 +1,3 @@
+gradle clean test
+gradle clean boardtests
+gradle clean profiletest

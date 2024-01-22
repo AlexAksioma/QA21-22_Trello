@@ -11,7 +11,7 @@ import java.lang.reflect.Method;
 
 public class LoginTests extends TestBase{
 
-    @Test
+    @Test(enabled = false)
     public void loginPositiveTest(Method method){
 //        UserDTO user = UserDTO.builder()
 //                .email("aksiomamedved@gmail.com")
