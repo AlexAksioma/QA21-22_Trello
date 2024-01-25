@@ -35,7 +35,7 @@ public class BoardTests extends TestBase {
         Assert.assertTrue(app.getHelperBoard().isTextInElementPresentByWait_boardTitle(boardTitle, 5));
     }
 
-    @Test(enabled = false)
+    @Test//(enabled = false)
     public void createNewBoardPositiveTest_Lombok(Method method) {
         int i = new Random().nextInt(1000) + 1000;
         BoardDTO board = BoardDTO.builder()

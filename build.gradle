@@ -25,15 +25,34 @@ test {
     useTestNG()
 }
 
-task boardtests(type:Test){
-    useTestNG(){
+task boardtests(type: Test) {
+    useTestNG() {
         suites 'src/test/resources/board.xml'
     }
 }
 
-task profiletests(type:Test){
-    useTestNG(){
+task profiletests(type: Test) {
+    useTestNG() {
         suites 'src/test/resources/profile.xml'
+    }
+    if (project.hasProperty('browser')) {
+        systemProperty 'browser', "${browser}"
+    }
+}
+
+task shortTest(type: Test) {
+    useTestNG() {
+        if (project.hasProperty('browser')) {
+            systemProperty 'browser', "${browser}"
+        }
+        def suite = System.getProperty('suite')
+        if(suite.equals('profile')){
+            suites 'src/test/resources/profile.xml'
+        }else if(suite.equals('boards')){
+            suites 'src/test/resources/board.xml'
+        }else {
+            suites 'src/test/resources/profile.xml'
+        }
     }
 }
 

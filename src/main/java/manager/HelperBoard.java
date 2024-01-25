@@ -10,29 +10,19 @@ public class HelperBoard extends HelperBase {
     public HelperBoard(WebDriver driver) {
         super(driver);
     }
-
     By buttonCreateNewBoard = By.xpath("//span[text()='Create new board']");
     By inputBoardTitle = By.xpath("//input[@data-testid='create-board-title-input']");
-
     By buttonCreateBoard = By.xpath("//button[@data-testid='create-board-submit-button']");
-
     By textBoardTitle = By.xpath("//h1[@data-testid='board-name-display']");
-
     By buttonBoards = By.xpath("//a[@data-testid='open-boards-link']"); //data-testid="open-boards-link"
-
     By dots = By.xpath("//button[@aria-label='Show menu']");
-
     By buttonCloseBoard = By.xpath("//a[@class='board-menu-navigation-item-link board-menu-navigation-item-link-v2 js-close-board']");
 
     By buttonCloseConfirm = By.xpath("//input[@value='Close']");
-
     By buttonDeleteBoard = By.xpath("//button[@data-testid='close-board-delete-board-button']");
     By buttonDeleteBoardConfirm = By.xpath("//button[@data-testid='close-board-delete-board-confirm-button']");
-
     //========================================]
-
     By listBoard = By.xpath("//h3[text()='YOUR WORKSPACES']/..//ul/li");
-
     By secondElementInListBoard = By.xpath("//h3[text()='YOUR WORKSPACES']/..//ul/li[2]");
 
 
