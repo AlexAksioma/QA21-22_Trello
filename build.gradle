@@ -46,13 +46,18 @@ task shortTest(type: Test) {
             systemProperty 'browser', "${browser}"
         }
         def suite = System.getProperty('suite')
-        if(suite.equals('profile')){
+        if (suite.equals('profile')) {
             suites 'src/test/resources/profile.xml'
-        }else if(suite.equals('boards')){
+        } else if (suite.equals('boards')) {
             suites 'src/test/resources/board.xml'
-        }else {
+        } else {
             suites 'src/test/resources/profile.xml'
         }
     }
 }
 
+task smoke(type: Test) {
+    useTestNG() {
+        suites 'src/test/resources/smoke.xml'
+    }
+}

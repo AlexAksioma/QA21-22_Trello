@@ -19,7 +19,7 @@ public class BoardTests extends TestBase {
 //            .password("AlexMed123!")
 //            .build();
 
-    @BeforeClass
+    @BeforeClass(alwaysRun = true)
     public void login() {
         logger.info("login with email --> " + user.getEmail() + " password --> " + user.getPassword());
         app.getHelperUser().loginDTO(user);
@@ -35,7 +35,7 @@ public class BoardTests extends TestBase {
         Assert.assertTrue(app.getHelperBoard().isTextInElementPresentByWait_boardTitle(boardTitle, 5));
     }
 
-    @Test//(enabled = false)
+    @Test(enabled = false)
     public void createNewBoardPositiveTest_Lombok(Method method) {
         int i = new Random().nextInt(1000) + 1000;
         BoardDTO board = BoardDTO.builder()
@@ -66,7 +66,9 @@ public class BoardTests extends TestBase {
 //        app.getHelperBoard().deleteBoard(board.getBoardTitle());
 //    }
 
-    @Test(dataProvider = "dataProvider_deleteBoardPositiveTest_DP", dataProviderClass = DataProviderBoard.class)
+    @Test(groups = {"smoke"},
+            dataProvider = "dataProvider_deleteBoardPositiveTest_DP",
+            dataProviderClass = DataProviderBoard.class)
     public void deleteBoardPositiveTest_DP(BoardDTO board, Method method) {
         app.getHelperBoard().createNewBoard(board.getBoardTitle()); //create new board
         logger.info("method --> " + method.getName() + " with data board title --> " + board.getBoardTitle());
@@ -75,14 +77,14 @@ public class BoardTests extends TestBase {
         app.getHelperBoard().deleteBoard(board.getBoardTitle());
     }
 
-    @Test(invocationCount = 1)
+    @Test()
     public void deleteAllBoardsTest() {
         //logger.info("start method deleteAllBoards =======================================");
         app.getHelperBoard().deleteElementList();
     }
 
 
-    @AfterMethod
+    @AfterMethod(alwaysRun = true)
     public void afterMethod() {
         logger.info("start after method ------------------------------");
         if (app.getHelperBoard().isElementPresent_buttonBoards())
@@ -90,7 +92,7 @@ public class BoardTests extends TestBase {
         logger.info("stop after method -------------------------------");
     }
 
-    @AfterClass
+    @AfterClass(alwaysRun = true)
     public void logout(){
         logger.info("start after class ------------------------------");
         app.getHelperUser().logout();

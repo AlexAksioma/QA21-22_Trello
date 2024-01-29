@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="85348986-9c44-4791-86ee-1889f5b3d958" name="Changes" comment="added data provider file, xml file + task">
+    <list default="true" id="85348986-9c44-4791-86ee-1889f5b3d958" name="Changes" comment="added firefox driver">
+      <change afterPath="$PROJECT_DIR$/src/test/resources/smoke.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle_tests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/gradle_tests.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/manager/ApplicationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/manager/ApplicationManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/manager/HelperBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/manager/HelperBoard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/BoardTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/BoardTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/TestBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/data_boards.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/data_boards.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +66,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/QA_Auto_Projects/JuliaProject"
+    "last_opened_file_path": "C:/QA_Auto_Projects/QA_21_22/QA21-22_Trello/src/test/resources",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -78,7 +79,7 @@
       <recent name="C:\QA_Auto_Projects\QA_21_22\QA21-22_Trello\src\test\java" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.BoardTests.createNewBoardPositiveTest_Lombok">
+  <component name="RunManager" selected="Gradle.BoardTests.deleteAllBoardsTest">
     <configuration name="BoardTests.createNewBoardPositiveTest_DP" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -201,8 +202,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.BoardTests.createNewBoardPositiveTest_Lombok" />
         <item itemvalue="Gradle.BoardTests.deleteAllBoardsTest" />
+        <item itemvalue="Gradle.BoardTests.createNewBoardPositiveTest_Lombok" />
         <item itemvalue="Gradle.BoardTests.createNewBoardPositiveTest_DP" />
         <item itemvalue="Gradle.LoginTests.loginPositiveTest" />
         <item itemvalue="Gradle.BoardTests.deleteBoardPositiveTest_DP" />
@@ -314,7 +315,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705945020088</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="added firefox driver">
+      <option name="closed" value="true" />
+      <created>1706202278918</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1706202278918</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -328,6 +337,7 @@
     <MESSAGE value="added method delete all boards" />
     <MESSAGE value="added data provider, listener TestNgListener" />
     <MESSAGE value="added data provider file, xml file + task" />
-    <option name="LAST_COMMIT_MESSAGE" value="added data provider file, xml file + task" />
+    <MESSAGE value="added firefox driver" />
+    <option name="LAST_COMMIT_MESSAGE" value="added firefox driver" />
   </component>
 </project>

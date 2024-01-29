@@ -21,12 +21,12 @@ public class TestBase {
             .password("AlexMed123!")
             .build();
 
-    @BeforeSuite
+    @BeforeSuite(alwaysRun = true)
     public void setup(){
         app.init();
     }
 
-    @AfterSuite
+    @AfterSuite(alwaysRun = true)
     public void tearDown(){
        // app.stop();
     }
