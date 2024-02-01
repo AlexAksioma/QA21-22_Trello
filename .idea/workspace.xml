@@ -4,13 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="85348986-9c44-4791-86ee-1889f5b3d958" name="Changes" comment="added firefox driver">
-      <change afterPath="$PROJECT_DIR$/src/test/resources/smoke.xml" afterDir="false" />
+    <list default="true" id="85348986-9c44-4791-86ee-1889f5b3d958" name="Changes" comment="added xml groups">
+      <change afterPath="$PROJECT_DIR$/src/main/java/utils/ConfigProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/fake.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/prod.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/BoardTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/BoardTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle_tests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/gradle_tests.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dataproviders/DataProviderBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dataproviders/DataProviderBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/manager/ApplicationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/manager/ApplicationManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/TestBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/data_boards.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/data_boards.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +69,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/QA_Auto_Projects/QA_21_22/QA21-22_Trello/src/test/resources",
+    "last_opened_file_path": "C:/QA_Auto_Projects/QA_21_22/QA21-22_Trello",
     "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
   }
 }]]></component>
@@ -79,7 +82,7 @@
       <recent name="C:\QA_Auto_Projects\QA_21_22\QA21-22_Trello\src\test\java" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.BoardTests.deleteAllBoardsTest">
+  <component name="RunManager" selected="Gradle.BoardTests.createNewBoardPositiveTest_DP">
     <configuration name="BoardTests.createNewBoardPositiveTest_DP" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -152,30 +155,6 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="BoardTests.deleteBoardPositiveTest_DP" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;tests.BoardTests.deleteBoardPositiveTest_DP&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
     <configuration name="LoginTests.loginPositiveTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -200,13 +179,37 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="ProfileTests.changeAvatarPositiveTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;tests.ProfileTests.changeAvatarPositiveTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.BoardTests.createNewBoardPositiveTest_DP" />
+        <item itemvalue="Gradle.ProfileTests.changeAvatarPositiveTest" />
         <item itemvalue="Gradle.BoardTests.deleteAllBoardsTest" />
         <item itemvalue="Gradle.BoardTests.createNewBoardPositiveTest_Lombok" />
-        <item itemvalue="Gradle.BoardTests.createNewBoardPositiveTest_DP" />
         <item itemvalue="Gradle.LoginTests.loginPositiveTest" />
-        <item itemvalue="Gradle.BoardTests.deleteBoardPositiveTest_DP" />
       </list>
     </recent_temporary>
   </component>
@@ -323,7 +326,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706202278918</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="added xml groups">
+      <option name="closed" value="true" />
+      <created>1706549891661</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1706549891661</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -338,6 +349,7 @@
     <MESSAGE value="added data provider, listener TestNgListener" />
     <MESSAGE value="added data provider file, xml file + task" />
     <MESSAGE value="added firefox driver" />
-    <option name="LAST_COMMIT_MESSAGE" value="added firefox driver" />
+    <MESSAGE value="added xml groups" />
+    <option name="LAST_COMMIT_MESSAGE" value="added xml groups" />
   </component>
 </project>

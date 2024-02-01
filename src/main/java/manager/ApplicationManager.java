@@ -1,12 +1,12 @@
 package manager;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.BrowserType;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import utils.ConfigProperties;
 
 import java.time.LocalDate;
 import java.util.concurrent.TimeUnit;
@@ -24,7 +24,7 @@ public class ApplicationManager {
 
     public Logger logger = LoggerFactory.getLogger(ApplicationManager.class);
 
-    String url = "https://trello.com/home";
+    //String url = "https://trello.com/home";
 
     static String browser;
 
@@ -44,8 +44,9 @@ public class ApplicationManager {
         driver.register(new WDListener());
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.navigate().to(url);
-
+        //driver.navigate().to(url);
+        driver.navigate().to(ConfigProperties.getProperties("url"));
+        logger.info("use file properties");
         helperUser = new HelperUser(driver);
         helperBoard = new HelperBoard(driver);
         helperProfile = new HelperProfile(driver);

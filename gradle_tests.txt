@@ -2,5 +2,9 @@ gradle clean test
 gradle clean boardtests
 gradle clean profiletest
 gradle clean -Pbrowser=firefox profiletests
-gradle clean profiletests -Pbrowser=firefox
+
 gradle clean shortTest -Dsuite=profile
+
+gradle clean profiletests -Ptarget=prod
+gradle clean profiletests -Ptarget=fake
+gradle clean profiletests -Ptarget=prod -Pbrowser=firefox

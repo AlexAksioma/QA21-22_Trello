@@ -2,6 +2,7 @@ package dataproviders;
 
 import models.BoardDTO;
 import org.testng.annotations.DataProvider;
+import utils.ConfigProperties;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -31,7 +32,9 @@ public class DataProviderBoard {
     @DataProvider
     public Iterator<Object[]> dataProvider_createNewBoardPositiveTest_DPFile(){
         List<Object[]> list = new ArrayList<>();
-        String path = "src/test/resources/data_boards.csv";
+        //String path = "src/test/resources/data_boards.csv";
+        String path = ConfigProperties.getProperties("pathDP");
+        System.out.println("----------->>> "+path);
         try {
             BufferedReader bufferedReader = new BufferedReader(new FileReader(new File(path)));
             String line = bufferedReader.readLine();
